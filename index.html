@@ -7,33 +7,39 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- HEADER CON NOMBRE CAMBIADO -->
+    <!-- HEADER CON LOGO UNIVERSIDAD -->
     <header>
-        <h1>BASE DE DATOS</h1>
-        <p>GAMBOA FERNANDEZ Richard Alejandro</p>
+        <div class="header-logo">
+            <!-- Reemplaza la ruta por el logo real de tu universidad -->
+            <img src="imagenes/logo-universidad.png" alt="Logo Universidad">
+            <div>
+                <h1>BASE DE DATOS</h1>
+                <p>GAMBOA FERNANDEZ Richard Alejandro</p>
+            </div>
+        </div>
     </header>
 
-    <!-- NAVEGACIÓN -->
+    <!-- MENÚ DE NAVEGACIÓN -->
     <nav class="menu">
         <ul>
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#proyectos">Proyectos</a></li>
             <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#semanas">Semanas</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
     </nav>
 
-    <!-- SECCIÓN INICIO - AQUÍ PUEDES AGREGAR TU FOTO DE PERFIL -->
+    <!-- INICIO -->
     <section id="inicio" class="seccion">
         <div class="contenedor">
-            <!-- APARTADO PARA TU FOTO PRINCIPAL - Reemplaza src con tu imagen -->
             <div class="foto-perfil">
-                <img id="fotoPrincipal" src="imagenes/tu-foto-perfil.jpg" alt="Foto de GAMBOA FERNANDES Richard Alejandro" width="200" height="200">
+                <!-- Foto principal -->
+                <img id="fotoPrincipal" src="imagenes/tu-foto-perfil.jpg" alt="Foto de GAMBOA FERNANDEZ Richard Alejandro" width="200" height="200">
             </div>
             <div class="texto">
-                <h2>Bienvenido a mi portafolio</h2>
-                <p>Desarrollador especializado en bases de datos y desarrollo web.</p>
-                <!-- APARTADO PARA ÍCONOS SOCIALES - Agrega tus enlaces -->
+                <h2>Portafolio de Base de Datos</h2>
+                <p>Trabajos y proyectos desarrollados en el curso de Base de Datos.</p>
                 <div class="redes-sociales">
                     <a href="#"><img src="imagenes/github.png" alt="GitHub" width="30"></a>
                     <a href="#"><img src="imagenes/linkedin.png" alt="LinkedIn" width="30"></a>
@@ -43,41 +49,32 @@
         </div>
     </section>
 
-    <!-- SECCIÓN PROYECTOS - AQUÍ VAN TUS PROYECTOS CON IMÁGENES -->
+    <!-- PROYECTOS -->
     <section id="proyectos" class="seccion">
-        <h2>Mis Proyectos</h2>
+        <h2>Proyectos</h2>
         <div class="grid-proyectos">
-            <!-- PROYECTO 1 - Reemplaza imagen y datos -->
             <div class="proyecto-card">
-                <!-- APARTADO PARA IMAGEN DEL PROYECTO 1 -->
                 <img src="imagenes/proyecto1.jpg" alt="Proyecto 1">
                 <h3>Sistema de Inventarios</h3>
-                <p>Base de datos MySQL para gestión empresarial.</p>
+                <p>Base de datos para controlar productos, entradas y salidas.</p>
             </div>
-            
-            <!-- PROYECTO 2 - Reemplaza imagen y datos -->
             <div class="proyecto-card">
-                <!-- APARTADO PARA IMAGEN DEL PROYECTO 2 -->
                 <img src="imagenes/proyecto2.jpg" alt="Proyecto 2">
                 <h3>Dashboard Analítico</h3>
-                <p>Visualización de datos con Power BI.</p>
+                <p>Visualización de indicadores clave del negocio.</p>
             </div>
-            
-            <!-- PROYECTO 3 - Reemplaza imagen y datos -->
             <div class="proyecto-card">
-                <!-- APARTADO PARA IMAGEN DEL PROYECTO 3 -->
                 <img src="imagenes/proyecto3.jpg" alt="Proyecto 3">
-                <h3>API RESTful</h3>
-                <p>Servicios web con Node.js y MongoDB.</p>
+                <h3>API REST</h3>
+                <p>Servicios para consultar y actualizar información.</p>
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN HABILIDADES - ÍCONOS DE TECNOLOGÍAS -->
+    <!-- HABILIDADES -->
     <section id="habilidades" class="seccion">
-        <h2>Habilidades Técnicas</h2>
+        <h2>Habilidades</h2>
         <div class="habilidades-grid">
-            <!-- APARTADO PARA ÍCONOS DE HABILIDADES - Agrega tus logos -->
             <div class="habilidad">
                 <img src="imagenes/mysql.png" alt="MySQL" width="60">
                 <span>MySQL</span>
@@ -97,25 +94,67 @@
         </div>
     </section>
 
-    <!-- SECCIÓN CONTACTO -->
+    <!-- SEMANAS DE TRABAJO -->
+    <section id="semanas" class="seccion">
+        <h2>Semanas de trabajo</h2>
+        <div class="semanas-grid">
+            <!-- Copia este bloque y cambia número, tema y archivos para más semanas -->
+            <div class="semana-card">
+                <h3>Semana 1</h3>
+                <p>Tema: Introducción a Bases de Datos</p>
+                <div class="botones-semana">
+                    <button class="btn-vista" data-doc="documentos/semana1.pdf">Vista previa</button>
+                    <a class="btn-descarga" href="documentos/semana1.pdf" download>Descargar</a>
+                </div>
+            </div>
+
+            <div class="semana-card">
+                <h3>Semana 2</h3>
+                <p>Tema: Modelo Entidad-Relación</p>
+                <div class="botones-semana">
+                    <button class="btn-vista" data-doc="documentos/semana2.pdf">Vista previa</button>
+                    <a class="btn-descarga" href="documentos/semana2.pdf" download>Descargar</a>
+                </div>
+            </div>
+
+            <div class="semana-card">
+                <h3>Semana 3</h3>
+                <p>Tema: Álgebra Relacional</p>
+                <div class="botones-semana">
+                    <button class="btn-vista" data-doc="documentos/semana3.pdf">Vista previa</button>
+                    <a class="btn-descarga" href="documentos/semana3.pdf" download>Descargar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
     <section id="contacto" class="seccion contacto">
         <h2>Contacto</h2>
-        <!-- APARTADO PARA FOTO DE CONTACTO O LOGO -->
         <div class="foto-contacto">
             <img src="imagenes/tu-foto-contacto.jpg" alt="Richard Gamboa" width="150">
         </div>
         <div class="info-contacto">
-            <p><strong>Email:</strong> richard.gamboa@email.com</p>
+            <p><strong>Email:</strong> tu.correo@ejemplo.com</p>
             <p><strong>Teléfono:</strong> +51 999 999 999</p>
-            <p><strong>LinkedIn:</strong> linkedin.com/in/richardgamboa</p>
+            <p><strong>Universidad:</strong> Nombre de la Universidad</p>
         </div>
     </section>
 
+    <!-- MODAL VISTA PREVIA DOCUMENTOS -->
+    <div id="modalVista" class="modal">
+        <div class="modal-contenido">
+            <button id="cerrarModal" class="modal-cerrar">&times;</button>
+            <iframe id="iframeDoc" src="" frameborder="0"></iframe>
+        </div>
+    </div>
+
     <!-- FOOTER -->
     <footer>
-        <p>&copy; 2025 GAMBOA FERNANDEZ Richard Alejandro. Todos los derechos reservados.</p>
+        <p>&copy; 2025 GAMBOA FERNANDEZ Richard Alejandro. Portafolio de Base de Datos.</p>
     </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
+
