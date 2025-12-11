@@ -1,44 +1,56 @@
-/* style.css - ESTILOS COMPLETOS PARA TU PÁGINA */
-
+/* RESETEO BÁSICO */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ESTILO GENERAL */
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #222;
+    background: #f3f4f6;         /* Gris claro formal */
     min-height: 100vh;
 }
 
+/* HEADER Y LOGO UNIVERSIDAD */
 header {
-    background: rgba(255, 255, 255, 0.95);
-    padding: 2rem;
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background: #0f172a;         /* Azul muy oscuro */
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-logo img {
+    height: 48px;
 }
 
 header h1 {
-    color: #2c3e50;
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+    color: #e5e7eb;
+    font-size: 2rem;
+    margin-bottom: 0.2rem;
 }
 
 header p {
-    color: #7f8c8d;
-    font-size: 1.2rem;
-    font-weight: bold;
+    color: #9ca3af;
+    font-size: 0.95rem;
 }
 
+/* MENÚ */
 .menu {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 0;
+    background: #111827;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 50;
 }
 
 .menu ul {
@@ -48,181 +60,269 @@ header p {
 }
 
 .menu li {
-    margin: 0 1rem;
+    margin: 0 0.5rem;
 }
 
 .menu a {
     display: block;
-    padding: 1rem 1.5rem;
-    color: #2c3e50;
+    padding: 0.9rem 1.4rem;
+    color: #e5e7eb;
     text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background 0.2s ease, color 0.2s ease;
 }
 
 .menu a:hover {
-    background: #3498db;
-    color: white;
-    border-radius: 5px;
+    background: #2563eb;
+    color: #ffffff;
+    border-radius: 999px;
 }
 
+/* SECCIONES GENERALES */
 .seccion {
-    padding: 4rem 2rem;
+    padding: 3rem 1.5rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+/* INICIO */
 #inicio {
-    text-align: center;
-    background: rgba(255, 255, 255, 0.95);
-    margin: 2rem auto;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    background: #ffffff;
+    margin-top: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
 .contenedor {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 3rem;
+    gap: 2.5rem;
     align-items: center;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
+    padding: 2.5rem 2rem;
 }
 
 .foto-perfil img {
     border-radius: 50%;
-    border: 5px solid #3498db;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    border: 4px solid #2563eb;
+    box-shadow: 0 5px 18px rgba(37,99,235,0.35);
 }
 
 .texto h2 {
-    color: #2c3e50;
-    margin-bottom: 1rem;
-    font-size: 2rem;
+    color: #111827;
+    margin-bottom: 0.75rem;
+    font-size: 1.8rem;
+}
+
+.texto p {
+    color: #4b5563;
 }
 
 .redes-sociales {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 }
 
 .redes-sociales a {
-    margin: 0 1rem;
+    margin-right: 1rem;
     display: inline-block;
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .redes-sociales a:hover {
-    transform: scale(1.2);
+    transform: translateY(-2px);
+    opacity: 0.85;
 }
 
-#proyectos h2, #habilidades h2, #contacto h2 {
+/* TÍTULOS SECCIONES */
+#proyectos h2,
+#habilidades h2,
+#semanas h2,
+#contacto h2 {
     text-align: center;
-    color: white;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    color: #111827;
+    font-size: 1.9rem;
+    margin-bottom: 2rem;
 }
 
+/* PROYECTOS */
 .grid-proyectos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
 }
 
 .proyecto-card {
-    background: rgba(255, 255, 255, 0.95);
-    padding: 2rem;
-    border-radius: 15px;
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 14px;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease;
+    box-shadow: 0 8px 20px rgba(15,23,42,0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .proyecto-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(15,23,42,0.18);
 }
 
 .proyecto-card img {
     width: 100%;
-    height: 200px;
+    height: 190px;
     object-fit: cover;
     border-radius: 10px;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
 }
 
+/* HABILIDADES */
 .habilidades-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 2rem;
-    text-align: center;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1.5rem;
 }
 
 .habilidad {
-    background: rgba(255, 255, 255, 0.95);
-    padding: 2rem 1rem;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    background: #ffffff;
+    padding: 1.5rem 1rem;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(15,23,42,0.12);
+    text-align: center;
 }
 
 .habilidad img {
     display: block;
-    margin: 0 auto 1rem;
-    filter: grayscale(50%);
-    transition: all 0.3s ease;
+    margin: 0 auto 0.8rem;
+    filter: grayscale(40%);
+    transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 .habilidad:hover img {
     filter: grayscale(0%);
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .habilidad span {
-    font-weight: bold;
-    color: #2c3e50;
-    font-size: 1.1rem;
+    font-weight: 600;
+    color: #111827;
 }
 
+/* SEMANAS */
+.semanas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.semana-card {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(15,23,42,0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.semana-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(15,23,42,0.18);
+}
+
+.semana-card h3 {
+    margin-bottom: 0.4rem;
+    color: #111827;
+}
+
+.semana-card p {
+    margin-bottom: 1rem;
+    color: #4b5563;
+}
+
+.botones-semana {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+/* BOTONES */
+.btn-vista,
+.btn-descarga {
+    border: none;
+    padding: 0.5rem 1.1rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    color: #ffffff;
+}
+
+.btn-vista {
+    background: #2563eb;
+}
+
+.btn-descarga {
+    background: #10b981;
+}
+
+.btn-vista:hover,
+.btn-descarga:hover {
+    opacity: 0.9;
+}
+
+/* CONTACTO */
 .contacto {
-    background: rgba(255, 255, 255, 0.95);
+    background: #ffffff;
     text-align: center;
-    border-radius: 20px;
-    margin: 2rem auto;
-    max-width: 600px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(15,23,42,0.12);
 }
 
 .foto-contacto img {
     border-radius: 50%;
-    border: 5px solid #3498db;
-    margin-bottom: 2rem;
+    border: 4px solid #2563eb;
+    margin-bottom: 1.5rem;
 }
 
 .info-contacto p {
-    font-size: 1.2rem;
-    margin: 1rem 0;
-    color: #2c3e50;
+    font-size: 1rem;
+    margin: 0.4rem 0;
+    color: #374151;
 }
 
-footer {
-    background: rgba(0,0,0,0.8);
-    color: white;
-    text-align: center;
-    padding: 2rem;
-    margin-top: 3rem;
+/* MODAL VISTA PREVIA */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .contenedor {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    
-    .menu ul {
-        flex-direction: column;
-    }
-    
-    .menu li {
-        margin: 0;
-    }
+.modal-contenido {
+    background: #ffffff;
+    width: 90%;
+    max-width: 900px;
+    height: 80vh;
+    border-radius: 12px;
+    padding: 0.5rem 0.75rem 1rem;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-cerrar {
+    align-self: flex-end;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+}
+
+#iframeDoc {
+    width: 100%;
+    height: 100%;
+    border: none;
 }
